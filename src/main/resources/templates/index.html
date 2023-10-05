@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Monster Manager</title>
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Monster List</h1>
+
+    <!-- List of Monsters -->
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Element</th>
+          <th>Level</th>
+          <th>Health</th>
+          <th>Attack</th>
+          <th>Defense</th>
+        </tr>
+      </thead>
+      <tbody id="monsterList"></tbody>
+    </table>
+
+    <!-- Add Monster Form -->
+    <h2>Add Monster</h2>
+    <form id="addMonsterForm">
+      <input type="text" id="name" placeholder="Name" required />
+      <input type="text" id="element" placeholder="Element" required />
+      <input type="number" id="level" placeholder="Level" required />
+      <input type="number" id="health" placeholder="Health" required />
+      <input type="number" id="attack" placeholder="Attack" required />
+      <input type="number" id="defense" placeholder="Defense" required />
+      <button type="submit">Add Monster</button>
+    </form>
+
+    <!-- Update Monster Form -->
+    <h2>Update Monster</h2>
+    <form id="updateMonsterForm">
+      <input type="text" id="updateId" placeholder="Id" required />
+      <input type="text" id="updateName" placeholder="Name" required />
+      <input type="text" id="updateElement" placeholder="Element" required />
+      <input type="number" id="updateLevel" placeholder="Level" required />
+      <input type="number" id="updateHealth" placeholder="Health" required />
+      <input type="number" id="updateAttack" placeholder="Attack" required />
+      <input type="number" id="updateDefense" placeholder="Defense" required />
+      <button type="submit">Update Monster</button>
+    </form>
+
+    <!-- Delete Monster Form -->
+    <h2>Delete Monster</h2>
+    <form id="deleteMonsterForm">
+      <input type="number" id="deleteId" placeholder="Monster ID" required />
+      <button type="submit">Delete Monster</button>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="monster.js"></script>
+  </body>
+</html>
